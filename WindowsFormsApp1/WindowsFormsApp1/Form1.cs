@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -11,15 +12,19 @@ using GDIDrawer;
 
 namespace WindowsFormsApp1
 {
+
+
     public partial class Form1 : Form
     {
-        static Mocha.Window window = new Mocha.Window(500, 500, 600, 600, "Temp window");
+        static Mocha.Window window = new Mocha.Window(0, 0, 1000, 600, "Temp window");
+
+        public enum val { idle, armed }
+
+        val value = val.idle;
 
         public Form1()
         {
             InitializeComponent();
-
-            
 
         }
 
@@ -30,6 +35,10 @@ namespace WindowsFormsApp1
 
         private void Form1_Resize(object sender, EventArgs e)
         {
+            
+
+
+
             
         }
     }
